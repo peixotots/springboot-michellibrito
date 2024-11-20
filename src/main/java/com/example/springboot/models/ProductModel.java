@@ -9,9 +9,12 @@ import java.util.UUID;
 @Entity
 @Table(name = "TB_PRODUCTS")
 public class ProductModel implements Serializable {
+    //Número de controle de versão da classe
+    //Cada classe que for serializada deve ter um número de versão
     private static final long serialVersionUID = 1L;
 
-    //Atributos do Model (campos da tabela)
+    //Mapeamento do Model para o banco de dados
+    //IDs serão gerados automaticamente
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idProduct;
